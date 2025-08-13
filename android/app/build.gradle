@@ -1,0 +1,37 @@
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android' version '1.9.23'
+}
+
+android {
+    namespace "com.example.threads_style_p2p_chat"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.threads_style_p2p_chat"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    packagingOptions {
+        pickFirst "META-INF/INDEX.LIST"
+        pickFirst "META-INF/io.netty.versions.properties"
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.23"
+}
