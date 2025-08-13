@@ -7,6 +7,16 @@ android {
     namespace "com.example.threads_style_p2p_chat"
     compileSdkVersion 34
 
+    compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+}
+
+kotlinOptions {
+    jvmTarget = "17"
+}
+
+
     defaultConfig {
         applicationId "com.example.threads_style_p2p_chat"
         minSdkVersion 24
